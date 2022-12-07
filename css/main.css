@@ -1,0 +1,558 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+    TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+        -Universal
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Nav
+        - Header
+        - Images
+        - Col
+        - Main
+        - What We Do
+        - Blockquote
+        - Achievements
+        - Footer
+        - Group Selectors
+        - Address
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Alignment
+        -Screenreader	    
+--------------------------------------------------------------*/
+
+/* Hi Elizabeth! I just want to say thank you for helping me so much, and when I say that, I don't just mean with coding. I really appreciate everything you've done for me and this class as a whole. Please keep being awesome! Thank you again! :) */
+
+/*--------------------------------------------------------------
+    3.0 - GENERIC
+-------------------------------------------------------------- */
+/* ----- UNIVERSAL ----- */
+
+*, 
+*:after, 
+*:before{
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+
+html{           /* set a font size! */
+        font: 1rem/1.6em 'Inter', sans-serif;
+        color:#1C516E;
+        text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENTS
+-------------------------------------------------------------- */
+
+/* ----- TYPOGRAPHY ----- */
+
+h2{
+        color:#1C516E;
+        font-size: 1.6rem;
+        font-weight: 600;
+}
+
+h1{
+        color:white;
+}
+
+
+ul{
+        padding:0;
+        text-align: center;
+}
+
+li{
+        display: inline-block;
+}
+
+/*--------------------------------------------------------------
+    5.0 - OBJECTS
+-------------------------------------------------------------- */
+
+
+/* ----- FRAMEWORK ----- */
+
+.wrapper{
+        width: 95%;
+        margin: 0 auto;
+}
+
+.row{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+}
+
+.img-responsive{
+        max-width: 100%;
+}
+
+[class*='col-']{
+        padding: 10px 5px;
+}
+
+[class*='col-'] [class*='col-']{
+        margin-left: -10px;
+        margin-right: -10px;
+}
+
+.col-sm-1 {
+        width: calc(100% * 1/ 12);
+}
+
+.col-sm-2 {
+        width: calc(100% * 2/ 12);
+}
+
+.col-sm-3 {
+        width: calc(100% * 3/ 12);
+}
+
+.col-sm-4 {
+        width: calc(100% * 4/ 12);
+}
+
+.col-sm-5 {
+        width: calc(100% * 5/ 12);
+}
+
+.col-sm-6 {
+        width: calc(100% * 6/ 12);
+}
+
+.col-sm-7 {
+        width: calc(100% * 7/ 12);
+}
+
+.col-sm-8 {
+        width: calc(100% * 8/ 12);
+}
+
+.col-sm-9 {
+        width: calc(100% * 9/ 12);
+}
+
+.col-sm-10 {
+        width: calc(100% * 10/ 12);
+}
+
+.col-sm-11 {
+        width: calc(100% * 11/ 12);
+}
+
+.col-sm-12 {
+        width: calc(100% * 12/ 12);
+}
+
+
+@media screen and (min-width: 768px){
+        .col-md-1 {
+                width: calc(100% * 1/ 12);
+        }
+        
+        .col-md-2 {
+                width: calc(100% * 2/ 12);
+        }
+        
+        .col-md-3 {
+                width: calc(100% * 3/ 12);
+        }
+        
+        .col-md-4 {
+                width: calc(100% * 4/ 12);
+        }
+        
+        .col-md-5 {
+                width: calc(100% * 5/ 12);
+        }
+        
+        .col-md-6 {
+                width: calc(100% * 6/ 12);
+        }
+        
+        .col-md-7 {
+                width: calc(100% * 7/ 12);
+        }
+        
+        .col-md-8 {
+                width: calc(100% * 8/ 12);
+        }
+        
+        .col-md-9 {
+                width: calc(100% * 9/ 12);
+        }
+        
+        .col-md-10 {
+                width: calc(100% * 10/ 12);
+        }
+        
+        .col-md-11 {
+                width: calc(100% * 11/ 12);
+        }
+        
+        .col-md-12 {
+                width: calc(100% * 12/ 12);
+        }
+
+}
+
+
+@media screen and (min-width: 1024px){
+
+        .wrapper{
+                width: 70%;
+        }
+
+        .col-lg-1 {
+                width: calc(100% * 1/ 12);
+        }
+        
+        .col-lg-2 {
+                width: calc(100% * 2/ 12);
+        }
+        
+        .col-lg-3 {
+                width: calc(100% * 3/ 12);
+        }
+        
+        .col-lg-4 {
+                width: calc(100% * 4/ 12);
+        }
+        
+        .col-lg-5 {
+                width: calc(100% * 5/ 12);
+        }
+        
+        .col-lg-6 {
+                width: calc(100% * 6/ 12);
+        }
+        
+        .col-lg-7 {
+                width: calc(100% * 7/ 12);
+        }
+        
+        .col-lg-8 {
+                width: calc(100% * 8/ 12);
+        }
+        
+        .col-lg-9 {
+                width: calc(100% * 9/ 12);
+        }
+        
+        .col-lg-10 {
+                width: calc(100% * 10/ 12);
+        }
+        
+        .col-lg-11 {
+                width: calc(100% * 11/ 12);
+        }
+        
+        .col-lg-12 {
+                width: calc(100% * 12/ 12);
+        }
+
+}
+
+
+/*--------------------------------------------------------------
+    6.0 - COMPONENTS
+-------------------------------------------------------------- */
+
+header>div:first-of-type{
+        background-color: #1C516E;
+}
+
+
+/* -----GROUP SELECTORS------ */
+
+
+/* -----COL------ */
+
+
+/* -----MAIN------ */
+
+main>section:first-of-type{
+        padding: 1em 0;
+}
+
+/* -----NAV------ */
+
+li{ 
+        padding: .6em;
+}
+
+nav li{
+        padding-bottom: 1em;
+}
+
+nav a{
+        background-color: #ffffff;
+        padding: .2em .5em;
+        border-radius: 1rem;
+        color:#1C516E;
+        text-decoration: none;
+}
+
+nav a:hover{
+        background-color: #1C516E;
+        padding: .2em .5em;
+        border-radius: 1rem;
+        color:#ffffff;
+        text-decoration: none;
+}
+
+footer nav li a:hover{
+        text-decoration: underline;
+        margin-bottom: 1em;
+}
+
+
+/* -----HEADER------ */
+
+header p{
+        font-size: 5rem;  
+        font-weight: 600;   
+        color:#ffffff;
+        padding-bottom: 2em;
+        margin-bottom: 0;
+}
+
+body>header{
+        background: url(../img/hero-chefs-cooking@2x.jpg) center no-repeat;
+        height: 35em;
+}
+
+/* -----IMAGES------ */
+
+#bg-chefs{
+        background: url(../img/hero-clove-club-chefs@2x.jpg) center no-repeat;
+        height: 35em;
+}
+
+
+/* -----ACCORDIAN MENU------ */
+
+.accordion{
+        cursor: pointer;
+        padding: .4em;
+        width: 100%;
+        text-align: left;
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+}
+
+.accordion h2{
+        color: #FFFFFF;
+}
+
+#bg-primary{
+        background-color:#7EA8BF;
+}
+
+#bg-secondary{
+        background-color: #4C83A0;
+}
+
+#bg-terciary{
+        background-color:#216488;
+}
+      
+.panel {
+        padding: 0 18px;
+        background-color: #DFECF3;
+        display: none;
+        overflow: hidden;
+}
+
+main li{
+        color:#000000;
+        font: 1rem/1.6em 'Josefin Sans', sans-serif;
+        font-weight: 100;
+        display:block;
+        text-align: left;
+        line-height: 1.5em;
+        margin: 1em 0;
+}
+
+b{
+        display:block;
+}
+
+
+/* -----FOOTER------ */
+
+footer i{
+        font-size: 1.4rem;
+        margin: 0 .5em;
+        color:#F1F0F0;
+}
+
+footer{
+        background-color: #1C516E;
+        text-align: center;
+        margin: 0 auto;
+        font-size: .8rem;
+}
+
+footer a{
+        color:#ffffff;
+        text-decoration: none;
+}
+/* -----ADDRESS------ */
+
+address{
+        padding:1em 0;
+        font-style: normal;
+        color: #ffffff;
+}
+
+address li{
+        display: block;
+}
+
+@media screen and (min-width: 768px){
+
+        /*--------------------------------------------------------------
+        3.0 - GENERIC
+        -------------------------------------------------------------- */
+        /* ----- UNIVERSAL ----- */
+
+        .wrapper{
+                width: 75%;
+        }
+
+        html{           /* set a font size! */
+                font: .9rem/1.6em 'Inter', sans-serif;
+        }
+
+
+        /*--------------------------------------------------------------
+        4.0 - ELEMENTS
+        -------------------------------------------------------------- */
+
+        /* ----- TYPOGRAPHY ----- */
+
+
+        /*--------------------------------------------------------------
+        6.0 - COMPONENTS
+        -------------------------------------------------------------- */
+
+
+        /* -----IMAGES------ */
+       
+
+        /* -----COL------ */
+
+        main .row>.col-md-4{
+                margin: 8em 0 8em 0;
+        }
+
+
+        /* -----NAV------ */
+
+        main nav li{
+                display: block;
+                padding: .2em; 
+                text-align: left;
+        }
+
+        body>header{
+                padding:2em 0 5em 0; 
+        }
+
+
+        /* -----HEADER------ */
+        
+
+
+        /* -----FOOTER------ */
+
+        footer li{
+                display: inline-block;
+        }
+
+        footer a:hover{
+                text-decoration: underline 2px;
+                margin-bottom: 1em;
+                color:#ffffff;
+        }
+
+        footer>div{
+                padding:.1em;
+        }
+
+        footer ul{
+                margin: 0 auto;
+        }
+       
+        footer .row{
+                flex-direction: column-reverse;
+        }
+}
+
+
+@media screen and (min-width: 1024px){
+
+       /*--------------------------------------------------------------
+        3.0 - GENERIC
+        -------------------------------------------------------------- */
+        /* ----- UNIVERSAL ----- */
+
+        html{           /* set a font size! */
+                font: 1.2rem/1.6em 'Inter', sans-serif;
+                color:#1C516E;
+                text-align: center;
+        }
+
+
+        .panel>.row{
+                flex-direction: row-reverse;
+        }
+
+}
+
+
+/*--------------------------------------------------------------
+    7.0 - UTILITY
+-------------------------------------------------------------- */
+
+/* -----INLINE-B------ */
+.inline-b{
+        display: inline-block;
+}
+
+/* -----ALIGNMENT------ */
+
+.col-center{
+        justify-content: center;
+        margin: 0 auto;
+}
+
+/* -----SCREEN READER------ */
+
+.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+}
