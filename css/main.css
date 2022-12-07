@@ -59,14 +59,21 @@ html{           /* set a font size! */
 
 /* ----- TYPOGRAPHY ----- */
 
+h3{
+        color:#ffffff;
+        margin-bottom: .4em;
+}
+
 h2{
         color:#1C516E;
         font-size: 1.6rem;
         font-weight: 600;
+        margin: 0 auto;
 }
 
 h1{
         color:white;
+        margin: 0 auto;
 }
 
 
@@ -289,6 +296,112 @@ main>section:first-of-type{
         padding: 1em 0;
 }
 
+/* -----CONTACT------ */
+
+#contact{
+        background-color:#7EA8BF;
+        padding: 2em 0 8em 0;
+        color: #ffffff;
+}
+
+#contact h2,
+#staff h2{
+        color: #ffffff;
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: .9em;
+}
+
+#contact a{
+        color:#ffffff;
+        font-size: 1.2rem;
+        line-height: .1em;
+        text-decoration: none;
+}
+
+#contact p:nth-of-type(2){
+        margin-top: 3em;
+}
+
+#contact a:hover{
+        text-decoration: underline;
+        margin-bottom: 1em;
+}
+
+#contact .row a{
+        background-color: #1C516E;
+        padding: .8em 1em;
+        border-radius: 2rem;
+        color:#ffffff;
+        text-decoration: none;
+        font-size: 1em;
+}
+
+#contact .row a:hover{
+        background-color: #ffffff;
+        color:#1C516E;
+}
+
+#contact .row{
+        margin-top: 4em;
+        justify-content: space-around;
+}
+
+
+/* -----STAFF------ */
+
+#staff{
+        background-color: #216488;
+        padding-top: 3em;
+        color:#ffffff;
+}
+
+#staff h2{
+        margin-bottom: 1.8em;
+}
+
+#staff p{
+        margin: .1em 0 5em 0;
+}
+
+/* -----CHEF IMAGES------ */
+
+section>#chef-rachel,
+section>#chef-dorothy,
+section>#chef-tim{
+        height: 15em;
+}
+
+#chef-rachel{
+        background: url(../img/chef-rachel.jpg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        text-align: center;
+}
+
+#chef-dorothy{
+        background: url(../img/chef-dorothy.jpg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        text-align: center;
+}
+
+#chef-tim{
+        background: url(../img/chef-tim.jpg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover; 
+        text-align: center; 
+}
+
 /* -----NAV------ */
 
 li{ 
@@ -325,22 +438,45 @@ footer nav li a:hover{
 
 header p{
         font-size: 5rem;  
-        font-weight: 600;   
+        font-weight: 500;   
         color:#ffffff;
         padding-bottom: 2em;
         margin-bottom: 0;
 }
 
 body>header{
-        background: url(../img/hero-chefs-cooking@2x.jpg) center no-repeat;
+        background: url(../img/hero-chefs-cooking@2x.jpg)  center center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        text-align: center;
         height: 35em;
 }
 
 /* -----IMAGES------ */
 
 #bg-chefs{
-        background: url(../img/hero-clove-club-chefs@2x.jpg) center no-repeat;
+        background: url(../img/hero-clove-club-chefs@2x.jpg) center center no-repeat ;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        text-align: center;
         height: 35em;
+}
+
+#clove-club-logo-repeat{
+        background:url(../img/clove-club-logo-repeat.svg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        text-align: center;
+        height: 20em;
 }
 
 
@@ -360,6 +496,13 @@ body>header{
 .accordion h2{
         color: #FFFFFF;
 }
+
+#bg-primary,
+#bg-secondary,
+#bg-terciary{
+        padding:1em 0;
+}
+
 
 #bg-primary{
         background-color:#7EA8BF;
@@ -408,6 +551,11 @@ footer{
         text-align: center;
         margin: 0 auto;
         font-size: .8rem;
+        line-height: 1.4em;
+}
+
+footer ul{
+        margin: 0 auto;
 }
 
 footer a{
@@ -473,7 +621,7 @@ address li{
         }
 
         body>header{
-                padding:2em 0 5em 0; 
+                padding-bottom: 5em; 
         }
 
 
@@ -504,6 +652,7 @@ address li{
         footer .row{
                 flex-direction: column-reverse;
         }
+
 }
 
 
