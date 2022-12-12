@@ -66,14 +66,20 @@ h3{
 
 h2{
         color:#1C516E;
-        font-size: 1.6rem;
+        font-size: 2.6rem;
         font-weight: 600;
-        margin: 0 auto;
+        margin-bottom: 1em;
 }
 
 h1{
-        color:white;
-        margin: 0 auto;
+        font-size: 5rem;  
+        font-weight: 500;   
+        color:#ffffff;
+        margin-bottom: 0;
+}
+
+p span{
+        font-size: 1rem;
 }
 
 
@@ -284,6 +290,10 @@ header>div:first-of-type{
 }
 
 
+a{
+        text-decoration: none;
+}
+
 /* -----GROUP SELECTORS------ */
 
 
@@ -307,7 +317,7 @@ main>section:first-of-type{
 #contact h2,
 #staff h2{
         color: #ffffff;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 400;
         margin-bottom: .9em;
 }
@@ -316,7 +326,6 @@ main>section:first-of-type{
         color:#ffffff;
         font-size: 1.2rem;
         line-height: .1em;
-        text-decoration: none;
 }
 
 #contact p:nth-of-type(2){
@@ -328,24 +337,24 @@ main>section:first-of-type{
         margin-bottom: 1em;
 }
 
-#contact .row a{
+#contact .row:nth-of-type(3) a{
         background-color: #1C516E;
         padding: .8em 1em;
         border-radius: 2rem;
         color:#ffffff;
-        text-decoration: none;
         font-size: 1em;
 }
 
-#contact .row a:hover{
+#contact .row:nth-of-type(3) a:hover{
         background-color: #ffffff;
         color:#1C516E;
 }
 
 #contact .row{
-        margin-top: 4em;
+        margin-top: 2em;
         justify-content: space-around;
 }
+
 
 
 /* -----STAFF------ */
@@ -358,6 +367,7 @@ main>section:first-of-type{
 
 #staff h2{
         margin-bottom: 1.8em;
+        font-size: 3em;
 }
 
 #staff p{
@@ -436,14 +446,6 @@ footer nav li a:hover{
 
 /* -----HEADER------ */
 
-header p{
-        font-size: 5rem;  
-        font-weight: 500;   
-        color:#ffffff;
-        padding-bottom: 2em;
-        margin-bottom: 0;
-}
-
 body>header{
         background: url(../img/hero-chefs-cooking@2x.jpg)  center center no-repeat;
         -moz-background-size: cover;
@@ -453,6 +455,16 @@ body>header{
         background-size: cover;  
         text-align: center;
         height: 35em;
+}
+
+header span{
+        font-size: 2rem;
+}
+
+/* -----SPAN------ */
+
+span{
+        display:none;
 }
 
 /* -----IMAGES------ */
@@ -476,7 +488,9 @@ body>header{
         -ms-background-size: cover;
         background-size: cover;  
         text-align: center;
-        height: 20em;
+        height: 15em;
+        padding-bottom: 5em;
+       
 }
 
 
@@ -487,14 +501,38 @@ body>header{
         padding: .4em;
         width: 100%;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1rem;
         border: none;
         outline: none;
         transition: 0.4s;
 }
+      
+
+.accordion:after {
+        /* content: '.fa-solid .fa-chevron-right'; */
+        color: #ffffff;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+}
+
+.active:after {
+        content: ".fa-solid .fa-angle-down";
+}
+
+.panel {
+        padding: 0 18px;
+        background-color: #DFECF3;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+}
+
 
 .accordion h2{
         color: #FFFFFF;
+        margin: 0 auto;
+        font-size: 1.6rem;
 }
 
 #bg-primary,
@@ -515,13 +553,6 @@ body>header{
 #bg-terciary{
         background-color:#216488;
 }
-      
-.panel {
-        padding: 0 18px;
-        background-color: #DFECF3;
-        display: none;
-        overflow: hidden;
-}
 
 main li{
         color:#000000;
@@ -533,8 +564,18 @@ main li{
         margin: 1em 0;
 }
 
+main{
+        background-color: #BBD6E4;
+}
+
 b{
         display:block;
+}
+
+.accordion i{
+        font-size: 1.8rem;
+        margin: 0 .5em;
+        color:#F1F0F0;  
 }
 
 
@@ -547,6 +588,7 @@ footer i{
 }
 
 footer{
+        padding: 2.5em 0;
         background-color: #1C516E;
         text-align: center;
         margin: 0 auto;
@@ -554,24 +596,34 @@ footer{
         line-height: 1.4em;
 }
 
-footer ul{
+footer p{
         margin: 0 auto;
 }
 
 footer a{
         color:#ffffff;
-        text-decoration: none;
+}
+
+footer address{
+        flex-direction: row-reverse;
 }
 /* -----ADDRESS------ */
 
 address{
         padding:1em 0;
         font-style: normal;
-        color: #ffffff;
 }
 
-address li{
-        display: block;
+address p{
+        text-align: center;
+        margin:.6em ;
+}
+
+address.row{
+        justify-content: center;
+        flex-direction: column;
+
+
 }
 
 @media screen and (min-width: 768px){
@@ -603,7 +655,42 @@ address li{
 
 
         /* -----IMAGES------ */
-       
+       #clove-club-logo-flipped{
+               background: url("../img/clove-club-logo.svg") left center no-repeat;
+               -moz-background-size: contain;
+               -o-background-size: contain;
+               -webkit-background-size: contain;
+               -ms-background-size: contain;
+               background-size: contain;  
+               text-align: center;
+               height: 10em; 
+               width: 100%;
+               position: absolute;
+               top: 4em;
+               left: -10em;
+        }
+
+        .pos-rel{
+                position: relative;
+        }
+
+        #clove-club-logo-flipped-2{
+                background: url("../img/clove-club-logo-flipped.svg") right center no-repeat;
+                -moz-background-size: contain;
+               -o-background-size: contain;
+               -webkit-background-size: contain;
+               -ms-background-size: contain;
+               background-size: contain;  
+               height: 10em; 
+               width:100%;
+               position: absolute;
+               top: 4em;
+               right: -10em;
+        }
+
+        #clove-club-logo-repeat{
+                display:none;
+        }
 
         /* -----COL------ */
 
@@ -626,13 +713,18 @@ address li{
 
 
         /* -----HEADER------ */
-        
+        header span{
+                display:contents;
+                color:#ffffff;
+                font-weight: 400;
+        }
 
 
         /* -----FOOTER------ */
 
-        footer li{
-                display: inline-block;
+        address.row{
+                display:inline-block;
+                flex-direction: column-reverse;
         }
 
         footer a:hover{
@@ -649,7 +741,7 @@ address li{
                 margin: 0 auto;
         }
        
-        footer .row{
+        footer>.row{
                 flex-direction: column-reverse;
         }
 
@@ -690,7 +782,7 @@ address li{
 
 .col-center{
         justify-content: center;
-        margin: 0 auto;
+        margin:0 auto;
 }
 
 /* -----SCREEN READER------ */

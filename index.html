@@ -17,12 +17,13 @@
     <header>
         <div>
             <div class="wrapper row">
-                <div class="col-sm-12 col-md-2">
-                    <h1>
-                        <a href="#">
-                            <img class="img-responsive" src="img/clove-club-logo.svg" alt="The Clove Club" width="50"> 
-                        </a> <!-- where logo goes LINKS TO HOME -->
-                    </h1>
+                <div class="col-sm-12 col-md-7">
+                    
+                    <a href="#">
+                        <img class="img-responsive" src="img/clove-club-logo.svg" alt="The Clove Club" width="60"> 
+                        <span>The Clove Club</span>
+                    </a> <!-- where logo goes LINKS TO HOME -->
+                
                 </div>
 
         
@@ -37,17 +38,23 @@
             </div>
         </div>
 
-        <p>Menus</p>
+        <h1>Menus</h1>
 
     </header>
 
     <main>
-        <section class="wrapper row">
-            <div class="col-center col-lg-6">
+        <section class="wrapper">
+            <div class="pos-rel row col-center col-lg-6">
                 <header>
                     <h2>Information</h2>
                 </header>
-    
+
+                <div class="img-responsive" id="clove-club-logo-flipped">
+
+                </div>
+                <div class="img-responsive" id="clove-club-logo-flipped-2">
+
+                </div>
                 <p>We serve both our tasting menu and short tasting menu at lunchtime, thursday to saturday. For dinner tuesday to thursday we serve our tasting menu in the dining room and our short tasting menu in the front room and bar countertop. For dinner on friday and saturday we serve our tasting menu across the whole restaurant.</p>
     
             </div>
@@ -55,9 +62,10 @@
         </section>
 
         <section>
-            <button class="accordion" id="bg-primary">
-                <header class="wrapper">
+            <button class="accordion row" id="bg-primary">
+                <header class="wrapper"><i class="fa-solid fa-chevron-right"></i><span><i class="fa-solid fa-angle-down"></i></span>
                     <h2>Short Menu</h2>
+
                 </header>
             </button>
             <div class="panel">
@@ -86,8 +94,8 @@
         </section>
 
         <section>
-            <button class="accordion" id="bg-secondary">
-                <header class="wrapper">
+            <button class="accordion row" id="bg-secondary">
+                <header class="wrapper"><i class="fa-solid fa-chevron-right"></i>
                     <h2>Tasting Menu</h2>
                 </header>
             </button>
@@ -130,8 +138,8 @@
         </section>
 
         <section>
-            <button class="accordion" id="bg-terciary">
-                <header class="wrapper">
+            <button class="accordion row" id="bg-terciary">
+                <header class="wrapper"><i class="fa-solid fa-chevron-right"></i>
                     <h2>Vegetarian Menu</h2>
                 </header>
             </button>
@@ -172,6 +180,10 @@
             </div>
         </section>
 
+        <div class="img-responsive" id="clove-club-logo-repeat">
+            
+        </div>
+
     </main>
 
     <footer>
@@ -196,16 +208,30 @@
                 </ul>
             </div>
         
-            <address class="wrapper col-sm-8">
-                <ul>
-            
-                    <li><a href="contact.html">Contact &amp; Reservations</a></li>
-                
-                    <li><a href="https://www.google.com/maps/place/Shoreditch+Town+Hall/@51.5271355,-0.0814466,17z/data=!3m1!4b1!4m5!3m4!1s0x48761cba5c12498f:0xf0cd268f50aa80d8!8m2!3d51.5271355!4d-0.0792579" target="_blank">Shoreditch Town Hall 380 Old Street, London EC1V 9LT</a></li>
+            <address class="wrapper">
+                <div class="row col-center">
+                    <div class="col-lg-4">
+                        <p>
+                            <a href="contact.html">Contact &amp; Reservations</a>
+                        </p>
+                    </div>
 
-                    <li><a href="mailto:hello@thecloveclub.com">hello@thecloveclub.com</a><br><a href="tel:+4402077296496">+(440) 207-729-6496</a></li>
+                    <div class="col-lg-4">
+                        <p>
+                            <a href="https://www.google.com/maps/place/Shoreditch+Town+Hall/@51.5271355,-0.0814466,17z/data=!3m1!4b1!4m5!3m4!1s0x48761cba5c12498f:0xf0cd268f50aa80d8!8m2!3d51.5271355!4d-0.0792579" target="_blank">Shoreditch Town Hall 380 Old Street,<br>London EC1V 9LT</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>
+                            <a href="mailto:hello@thecloveclub.com">hello@thecloveclub.com</a>
+                            <p>
+                                <a href="tel:+4402077296496">+(440) 207-729-6496</a>
+                            </p>
+                        </p>
+                    </div>
+                    
                 
-                </ul> 
+                </div> 
             </address>
         </div>
     </footer>
