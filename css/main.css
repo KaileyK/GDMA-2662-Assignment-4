@@ -28,7 +28,7 @@
         -Screenreader	    
 --------------------------------------------------------------*/
 
-/* Hi Elizabeth! I just want to say thank you for helping me so much, and when I say that, I don't just mean with coding. I really appreciate everything you've done for me and this class as a whole. Please keep being awesome! Thank you again! :) */
+
 
 /*--------------------------------------------------------------
     3.0 - GENERIC
@@ -67,13 +67,13 @@ h3{
 h2{
         color:#1C516E;
         font-size: 2.6rem;
-        font-weight: 600;
-        margin-bottom: 1em;
+        font-weight: 500;
+        margin-bottom: .6em;
 }
 
 h1{
-        font-size: 5rem;  
-        font-weight: 500;   
+        font-size: 4rem;  
+        font-weight: 400;   
         color:#ffffff;
         margin-bottom: 0;
 }
@@ -91,6 +91,8 @@ ul{
 li{
         display: inline-block;
 }
+
+
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -310,8 +312,13 @@ main>section:first-of-type{
 
 #contact{
         background-color:#7EA8BF;
-        padding: 2em 0 8em 0;
+        padding: 1em 0 7em 0;
         color: #ffffff;
+}
+
+
+#contact p{
+        font-weight: 300;
 }
 
 #contact h2,
@@ -339,15 +346,17 @@ main>section:first-of-type{
 
 #contact .row:nth-of-type(3) a{
         background-color: #1C516E;
-        padding: .8em 1em;
-        border-radius: 2rem;
+        padding: 1em 1.2em;
+        border-radius: 1.2rem;
         color:#ffffff;
         font-size: 1em;
+        font-weight: 400;
 }
 
 #contact .row:nth-of-type(3) a:hover{
         background-color: #ffffff;
         color:#1C516E;
+        text-decoration: none;
 }
 
 #contact .row{
@@ -372,6 +381,7 @@ main>section:first-of-type{
 
 #staff p{
         margin: .1em 0 5em 0;
+        font-size: .9rem;
 }
 
 /* -----CHEF IMAGES------ */
@@ -458,7 +468,11 @@ body>header{
 }
 
 header span{
-        font-size: 2rem;
+        font-size: 2.3rem;
+}
+
+header a{
+        justify-items: center;     
 }
 
 /* -----SPAN------ */
@@ -501,38 +515,45 @@ span{
         padding: .4em;
         width: 100%;
         text-align: left;
-        font-size: 1rem;
         border: none;
         outline: none;
         transition: 0.4s;
 }
-      
 
-.accordion:after {
-        /* content: '.fa-solid .fa-chevron-right'; */
-        color: #ffffff;
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
+.accordion header{
+        position: relative;
+        top:0;
+        left: 0;
 }
 
-.active:after {
-        content: ".fa-solid .fa-angle-down";
+.accordion header i{
+        position: absolute;
+        top: 9px;
+        right:0;
+        transition: 0.4s;
 }
+  
+.accordion.selected header i{
+        cursor:pointer;
+        transform: rotate(90deg);
+}
+
 
 .panel {
         padding: 0 18px;
         background-color: #DFECF3;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.2s ease-out;
+        transition: max-height 0.2s ease-out;       
 }
 
 
 .accordion h2{
         color: #FFFFFF;
         margin: 0 auto;
+        padding: .3em 0;
         font-size: 1.6rem;
+        font-weight: 400;
 }
 
 #bg-primary,
@@ -663,11 +684,11 @@ address.row{
                -ms-background-size: contain;
                background-size: contain;  
                text-align: center;
-               height: 10em; 
+               height: 15em; 
                width: 100%;
                position: absolute;
-               top: 4em;
-               left: -10em;
+               top: 2em;
+               left: -18em;
         }
 
         .pos-rel{
@@ -681,11 +702,11 @@ address.row{
                -webkit-background-size: contain;
                -ms-background-size: contain;
                background-size: contain;  
-               height: 10em; 
+               height: 15em; 
                width:100%;
                position: absolute;
-               top: 4em;
-               right: -10em;
+               top: 2em;
+               right: -18em;
         }
 
         #clove-club-logo-repeat{
@@ -716,7 +737,6 @@ address.row{
         header span{
                 display:contents;
                 color:#ffffff;
-                font-weight: 400;
         }
 
 

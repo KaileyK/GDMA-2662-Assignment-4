@@ -20,7 +20,7 @@
                 <div class="col-sm-12 col-md-7">
                     
                     <a href="#">
-                        <img class="img-responsive" src="img/clove-club-logo.svg" alt="The Clove Club" width="60"> 
+                        <img class="img-responsive" src="img/clove-club-logo.svg" alt="The Clove Club" width="70"> 
                         <span>The Clove Club</span>
                     </a> <!-- where logo goes LINKS TO HOME -->
                 
@@ -63,7 +63,7 @@
 
         <section>
             <button class="accordion row" id="bg-primary">
-                <header class="wrapper"><i class="fa-solid fa-chevron-right"></i><span><i class="fa-solid fa-angle-down"></i></span>
+                <header class="wrapper"><i class="fa-solid fa-chevron-right"></i>
                     <h2>Short Menu</h2>
 
                 </header>
@@ -222,12 +222,14 @@
                         </p>
                     </div>
                     <div class="col-lg-4">
+                        
                         <p>
                             <a href="mailto:hello@thecloveclub.com">hello@thecloveclub.com</a>
-                            <p>
-                                <a href="tel:+4402077296496">+(440) 207-729-6496</a>
-                            </p>
                         </p>
+                        <p>
+                            <a href="tel:+4402077296496">+(440) 207-729-6496</a>
+                        </p>
+                        
                     </div>
                     
                 
@@ -240,6 +242,14 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/functions.js"></script>
+    <script>
+ 
+        var $links = $('.accordion');
+            $links.click(function(){
+            $(this).toggleClass('selected');
+        });
+
+    </script>
 
     
 </body>

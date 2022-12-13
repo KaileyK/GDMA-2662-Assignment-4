@@ -121,6 +121,8 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+
+
 // Initial check
 handleTabletChange(mediaQuery);
 
