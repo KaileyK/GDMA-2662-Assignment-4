@@ -15,20 +15,20 @@
         - Nav
         - Header
         - Images
+        - Chef Images
         - Col
         - Main
-        - What We Do
-        - Blockquote
-        - Achievements
+        - Span
+        - Accordion Menu
         - Footer
-        - Group Selectors
+        - Contact
+        - Staff
         - Address
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment
-        -Screenreader	    
+        - Screenreader	 
+        - Inline-B   
 --------------------------------------------------------------*/
-
-
 
 /*--------------------------------------------------------------
     3.0 - GENERIC
@@ -76,6 +76,7 @@ h1{
         font-weight: 400;   
         color:#ffffff;
         margin-bottom: 0;
+        line-height: 1em;
 }
 
 p span{
@@ -296,17 +297,27 @@ a{
         text-decoration: none;
 }
 
-/* -----GROUP SELECTORS------ */
-
-
-/* -----COL------ */
-
 
 /* -----MAIN------ */
 
 main>section:first-of-type{
         padding: 1em 0;
 }
+
+main li{
+        color:#000000;
+        font: 1rem/1.6em 'Josefin Sans', sans-serif;
+        font-weight: 100;
+        display:block;
+        text-align: left;
+        line-height: 1.5em;
+        margin: 1em 0;
+}
+
+main{
+        background-color: #BBD6E4;
+}
+
 
 /* -----CONTACT------ */
 
@@ -481,6 +492,10 @@ span{
         display:none;
 }
 
+span.wrapper{
+        display:block;
+}
+
 /* -----IMAGES------ */
 
 #bg-chefs{
@@ -504,11 +519,12 @@ span{
         text-align: center;
         height: 15em;
         padding-bottom: 5em;
+        margin-top: 4em;
        
 }
 
 
-/* -----ACCORDIAN MENU------ */
+/* -----ACCORDION MENU------ */
 
 .accordion{
         cursor: pointer;
@@ -520,24 +536,29 @@ span{
         transition: 0.4s;
 }
 
-.accordion header{
+.accordion{
         position: relative;
         top:0;
         left: 0;
 }
 
-.accordion header i{
+.accordion> .wrapper{
+        position: relative;
+        top: 0;
+        left: 0;
+}
+
+.accordion i{
         position: absolute;
-        top: 9px;
+        top: .2em;
         right:0;
         transition: 0.4s;
 }
   
-.accordion.selected header i{
+.accordion.selected i{
         cursor:pointer;
         transform: rotate(90deg);
 }
-
 
 .panel {
         padding: 0 18px;
@@ -546,7 +567,6 @@ span{
         overflow: hidden;
         transition: max-height 0.2s ease-out;       
 }
-
 
 .accordion h2{
         color: #FFFFFF;
@@ -562,7 +582,6 @@ span{
         padding:1em 0;
 }
 
-
 #bg-primary{
         background-color:#7EA8BF;
 }
@@ -573,20 +592,6 @@ span{
 
 #bg-terciary{
         background-color:#216488;
-}
-
-main li{
-        color:#000000;
-        font: 1rem/1.6em 'Josefin Sans', sans-serif;
-        font-weight: 100;
-        display:block;
-        text-align: left;
-        line-height: 1.5em;
-        margin: 1em 0;
-}
-
-main{
-        background-color: #BBD6E4;
 }
 
 b{
@@ -664,13 +669,6 @@ address.row{
 
 
         /*--------------------------------------------------------------
-        4.0 - ELEMENTS
-        -------------------------------------------------------------- */
-
-        /* ----- TYPOGRAPHY ----- */
-
-
-        /*--------------------------------------------------------------
         6.0 - COMPONENTS
         -------------------------------------------------------------- */
 
@@ -713,13 +711,6 @@ address.row{
                 display:none;
         }
 
-        /* -----COL------ */
-
-        main .row>.col-md-4{
-                margin: 8em 0 8em 0;
-        }
-
-
         /* -----NAV------ */
 
         main nav li{
@@ -739,6 +730,10 @@ address.row{
                 color:#ffffff;
         }
 
+        span.wrapper{
+                display:contents;
+                display:block;
+        }
 
         /* -----FOOTER------ */
 
